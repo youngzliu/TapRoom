@@ -10,6 +10,7 @@ export class KegListComponent implements OnInit {
   @Output () clickSender = new EventEmitter();
   @Output() kegToSort = new EventEmitter();
 
+  filterByPrice = "100";
 
   onChange(option){
     this.kegToSort.emit(option);

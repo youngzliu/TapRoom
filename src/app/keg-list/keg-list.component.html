@@ -5,8 +5,11 @@
   <option value="price">Price</option>
   <option value="alcohol" selected="selected">Alcohol Content</option>
 </select>
+
+<label>Price to filter less than by:</label>
+<input [(ngModel)]="filterByPrice">
 <div class="row">
-  <div *ngFor="let keg of childKegList" class="col-md-4">
+  <div *ngFor="let keg of childKegList | kegPipe:filterByPrice" class="col-md-4">
       <div [class]='titleColor(keg)'>
         <h3 (click)="showDetails(keg)">{{keg.name}}</h3>
       </div>

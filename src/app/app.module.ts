@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
+import { KegPipe } from './keg.pipe';
 
 import { AppComponent } from './app.component';
 import { KegListComponent } from './keg-list/keg-list.component';
@@ -13,10 +14,12 @@ import { KegNewComponent } from './keg-new/keg-new.component';
     AppComponent,
     KegListComponent,
     KegEditComponent,
-    KegNewComponent
+    KegNewComponent,
+    KegPipe
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
