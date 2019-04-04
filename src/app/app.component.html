@@ -1,5 +1,21 @@
-<body>
+<div class="card text-center">
+  <div class="card-header">
+    <ul class="nav nav-pills card-header-pills">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="">Our Brewery</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="about">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="market">Our Market</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
 <div class="container">
+  <router-outlet></router-outlet>
   <h1>Tap Room</h1>
 
   <app-keg-list [childKegList]="MasterKegList" (clickSender)="editKeg($event)" (kegToSort)="sortKegs($event)"></app-keg-list>
@@ -10,4 +26,3 @@
     <app-keg-new (sendKeg)="addKeg($event)"></app-keg-new>
   </div>
 </div>
-</body>

@@ -7,6 +7,11 @@ import { AppComponent } from './app.component';
 import { KegListComponent } from './keg-list/keg-list.component';
 import { KegEditComponent } from './keg-edit/keg-edit.component';
 import { KegNewComponent } from './keg-new/keg-new.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { routing } from './app.routing';
+import { AboutComponent } from './about/about.component';
+import { BrewmarketComponent } from './brewmarket/brewmarket.component';
+import { BrewDetailComponent } from './brew-detail/brew-detail.component';
 
 
 @NgModule({
@@ -15,11 +20,16 @@ import { KegNewComponent } from './keg-new/keg-new.component';
     KegListComponent,
     KegEditComponent,
     KegNewComponent,
-    KegPipe
+    KegPipe,
+    WelcomeComponent,
+    AboutComponent,
+    BrewmarketComponent,
+    BrewDetailComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]

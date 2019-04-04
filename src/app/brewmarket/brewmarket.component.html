@@ -1,0 +1,14 @@
+<h2>Brew Market</h2>
+<div class="row">
+<div *ngFor="let keg of MasterKegList" (click)="goToDetaiLPage(keg)" class="card col-md-4">
+  <div class="card-header">
+    <p><strong>Keg Name:</strong> {{keg.name}}</p>
+  </div>
+  <div class="card-body">
+    <p><strong>Keg Brand:</strong> {{keg.brand}}</p>
+    <p><strong>Price:</strong> ${{keg.price}}</p>
+    <p><strong>Alcohol Content:</strong> {{keg.alcoholContent}}%</p>
+    <p><strong>Pints Left:</strong> {{keg.pintsLeft}} Pints</p>
+  </div>
+</div>
+</div>

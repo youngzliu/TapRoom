@@ -11,7 +11,7 @@ export class KegNewComponent implements OnInit {
   @Output() sendKeg = new EventEmitter();
 
   submitForm(name: string, brand: string, price: string, alcohol: string){
-    let newKeg = new Keg(name, brand, parseInt(price), parseInt(alcohol));
+    let newKeg = new Keg(name, brand, parseInt(price), parseInt(alcohol), 15);
     this.sendKeg.emit(newKeg);
   }
 

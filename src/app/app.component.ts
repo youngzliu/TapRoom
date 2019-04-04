@@ -10,9 +10,9 @@ export class AppComponent {
   title = 'app';
   addShown = false;
   MasterKegList: Keg[] = [
-    new Keg('Aest','Best',50,10),
-    new Keg('Cest2','Aest3',20,50),
-    new Keg('Eest3','Test3',3,5)
+    new Keg('Aest','Best',50,10, 1),
+    new Keg('Cest2','Aest3',20,50, 2),
+    new Keg('Eest3','Test3',3,5, 3)
   ];
   currentSort = "";
 
