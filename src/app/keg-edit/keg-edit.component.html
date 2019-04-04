@@ -1,0 +1,7 @@
+<div *ngIf="childSelectedKeg">
+  <h3>Keg Name: {{childSelectedKeg.name}}</h3>
+  <p><strong>Pints Left:</strong> {{childSelectedKeg.pintsLeft}} Pints</p>
+  <label>How many pints do you want to buy?</label>
+  <input #pintsSold>
+  <button (click)="buyKeg(pintsSold.value); pintsSold.value='';">Buy</button>
+</div>

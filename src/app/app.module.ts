@@ -3,11 +3,17 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { KegListComponent } from './keg-list/keg-list.component';
+import { KegEditComponent } from './keg-edit/keg-edit.component';
+import { KegNewComponent } from './keg-new/keg-new.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    KegListComponent,
+    KegEditComponent,
+    KegNewComponent
   ],
   imports: [
     BrowserModule

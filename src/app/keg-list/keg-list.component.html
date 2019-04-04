@@ -1,0 +1,22 @@
+<label>Sort By:</label>
+<select (change)="onChange($event.target.value)">
+  <option value="name">Name</option>
+  <option value="brand">Brand</option>
+  <option value="price">Price</option>
+  <option value="alcohol" selected="selected">Alcohol Content</option>
+</select>
+<div class="row">
+  <div *ngFor="let keg of childKegList" class="col-md-4">
+      <div [class]='titleColor(keg)'>
+        <h3 (click)="showDetails(keg)">{{keg.name}}</h3>
+      </div>
+      <div *ngIf='keg.shown'>
+        <p><strong>Keg Name:</strong> {{keg.name}}</p>
+        <p><strong>Keg Brand:</strong> {{keg.brand}}</p>
+        <p><strong>Price:</strong> ${{keg.price}}</p>
+        <p><strong>Alcohol Content:</strong> {{keg.alcoholContent}}%</p>
+        <p><strong>Pints Left:</strong> {{keg.pintsLeft}} Pints</p>
+        <button (click)="editKeg(keg)">Edit!</button>
+      </div>
+  </div>
+</div>
